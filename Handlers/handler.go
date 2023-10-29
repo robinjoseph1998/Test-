@@ -27,7 +27,7 @@ func (th *TestHandlers) Sample(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"Your Name Saved": savedName})
+	c.JSON(http.StatusOK, gin.H{"Your Name SuccessFully Saved": savedName})
 }
 
 func (th *TestHandlers) ShowName(c *gin.Context) {
@@ -36,5 +36,5 @@ func (th *TestHandlers) ShowName(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"The Name Is": Name})
+	c.JSON(http.StatusOK, gin.H{"The Name Is:::::::::::": Name})
 }
