@@ -31,10 +31,10 @@ func (th *TestHandlers) Sample(c *gin.Context) {
 }
 
 func (th *TestHandlers) ShowName(c *gin.Context) {
-	Name, err := th.Usecase.ExecuteShowName()
+	SavedNameFromDb, err := th.Usecase.ExecuteShowName()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{"The Name Is:::::::::::": Name})
+	c.JSON(http.StatusOK, gin.H{"::::::::::::::The Name you Saved:::::::::::": SavedNameFromDb})
 }
