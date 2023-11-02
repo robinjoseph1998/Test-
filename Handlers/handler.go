@@ -12,7 +12,7 @@ type TestHandlers struct {
 	Usecase usecase.UseCase
 }
 
-func NewTestHandlers() *TestHandlers {
+func NewTestHandlers(u *usecase.UseCase) *TestHandlers {
 	return &TestHandlers{}
 }
 

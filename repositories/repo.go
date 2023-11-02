@@ -9,7 +9,7 @@ type Repo struct {
 	model model.DataModel
 }
 
-func NewRepo() *Repo {
+func NewRepo(model.DataModel) *Repo {
 
 	return &Repo{}
 
